@@ -90,4 +90,5 @@ def save():
     
     counter += 1
     return new_text
-
+if __name__ == '__main__':
+    app.run(debug=True)
