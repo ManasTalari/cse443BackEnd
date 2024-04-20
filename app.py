@@ -19,7 +19,7 @@ collection = db['numberPlates']
 
 FRAME_WIDTH = 640
 FRAME_HEIGHT = 480
-PLATE_CASCADE = cv2.CascadeClassifier('/Users/prudhviraj/Downloads/indian_license_plate.xml')
+PLATE_CASCADE = cv2.CascadeClassifier('./indian_license_plate.xml')
 MIN_AREA = 200
 COLOR = (255, 0, 255) 
 
