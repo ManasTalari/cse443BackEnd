@@ -86,6 +86,7 @@ def save():
         if i in alpha or i in num:
             new_text+=i
     print(new_text)
+    print("Yes!!!!!")
     collection.insert_one({"number":f"{new_text}"})
     
     counter += 1
