@@ -32,7 +32,7 @@ CORS(app)
 counter = 0  # Counter for image filenames
 
 def generate_frames():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture()
     global img_roi
     while cap.isOpened():
         # read the camera frame
