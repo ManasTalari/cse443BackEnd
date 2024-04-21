@@ -31,8 +31,8 @@ app = Flask(__name__)
 CORS(app)
 counter = 0  # Counter for image filenames
 
-def generate_frames():
-    cap = cv2.VideoCapture()
+def generate_frames(n):
+    cap = cv2.VideoCapture(n)
     global img_roi
     while cap.isOpened():
         # read the camera frame
@@ -68,7 +68,7 @@ def index():
 
 @app.route('/video')
 def video():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(generate_frames(0), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 
