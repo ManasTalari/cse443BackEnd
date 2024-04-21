@@ -34,7 +34,7 @@ counter = 0  # Counter for image filenames
 def generate_frames():
     cap = cv2.VideoCapture(0)
     global img_roi
-    while True:
+    while cap.isOpened():
         # read the camera frame
         success, frame = cap.read()
         
