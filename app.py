@@ -30,11 +30,10 @@ img_roi: np.ndarray = np.array([1, 2, 3])
 app = Flask(__name__)
 CORS(app)
 counter = 0  # Counter for image filenames
-
+cap = cv2.VideoCapture(0)  
 def generate_frames(n):
-    cap = cv2.VideoCapture(0)  
-    cap.release()   
-    cap= cv2.VideoCapture(0)  
+    
+    
     global img_roi
     while cap.isOpened():
         # read the camera frame
